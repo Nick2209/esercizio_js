@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Come ti chiami? <input type="text" name="nome"><br>
+    <button id="clicca">STAMPA</button>
+    <h3 id="testo"></h3>
+    <br>
+    <br>
+    <h3 id="numero"></h3>
+    <button id="aggiungi">+</button>
+    <script>
+        let input = document.getElementsByName("nome")[0];
+        let button = document.getElementById("clicca");
+        let carattere = document.getElementById("testo");
+        button.onclick = function (){
+            let nome = input.value;
+            carattere.innerText = "Ciao, " + nome + "!";
+        }
+
+        let conteggio = 0
+        let count = document.getElementById("numero");
+        let btnAggiungi = document.getElementById("aggiungi");
+        btnAggiungi.onclick = function(){
+            conteggio++;
+            count.innerText = conteggio;
+        }
+    </script>
+</body>
+</html>
